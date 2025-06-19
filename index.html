@@ -5,6 +5,25 @@
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Starter</title>
+
+        <script>
+            window.hooks = {};
+            window.hooks.extensions = {};
+            window.hooks.extensions.nrk = function () {
+                let e = document.createElement("em");
+                const txt = document.createTextNode("Hello world!");
+                e.appendChild(txt);
+                return e;
+            };
+
+            window.hooks.extensions.jrk = function (p) {
+                return "<code>some text here" + JSON.stringify(p) + "</code>";
+            };
+
+            window.hooks.extensions.zjk = function (p) {
+                return window.testcomponent;
+            };
+        </script>
     </head>
     <body>
         <script type="module" src="src/index.tsx"></script>

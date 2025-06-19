@@ -2,10 +2,12 @@ import './App.css';
 import { Link, Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { ExtensionProvider } from './components/ExtensionRegistry';
 
 function App() {
 
   return (
+    <ExtensionProvider>
       <div>
         <ul className='flex flex-row items-left p-7 rounded-2xl'>
           <li className='flex pr-4'><Link className='text-blue-500 hover:underline' to='/tool1'>Tool 1</Link></li>
@@ -14,7 +16,8 @@ function App() {
         <Suspense fallback={<p>Loading...</p>}>
           <Outlet />
         </Suspense>
-        </div>
+      </div>
+    </ExtensionProvider>
   );
 }
 
