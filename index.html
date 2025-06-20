@@ -9,15 +9,15 @@
         <script>
             window.hooks = {};
             window.hooks.extensions = {};
-            window.hooks.extensions.nrk = function () {
+            window.hooks.extensions.tool1_upper = function () {
                 let e = document.createElement("em");
-                const txt = document.createTextNode("Hello world!");
+                const txt = document.createTextNode("You must look at this page to continue!");
                 e.appendChild(txt);
                 return e;
             };
 
-            window.hooks.extensions.jrk = function (p) {
-                return "<code>some text here" + JSON.stringify(p) + "</code>";
+            window.hooks.extensions.tool1_lower = function (p) {
+                return `For more help, see <a href="${p.link}" target="_blank">this page</a>.`;
             };
 
             window.hooks.extensions.zjk = function (p) {

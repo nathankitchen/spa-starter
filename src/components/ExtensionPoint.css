@@ -1,0 +1,3 @@
+.extensionPointDevMode { background-color: #efefef; border: 2px dotted grey; margin: 2px; padding: 3px 5px; }
+.extensionPointDevMode::before { color: #888; content: 'Extension point'; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; }
+.extensionPointDevMode p { font-size: 0.8rem; }

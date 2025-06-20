@@ -2,6 +2,7 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import App from './app';
 import ErrorPage from './errorPage';
+import HomePage from './routes/homePage';
 
 const Tool1 = React.lazy(() => import("./routes/tool1Page"));
 const Tool2 = React.lazy(() => import("./routes/tool2Page"));
@@ -14,7 +15,7 @@ export default createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Tool1 num={1} />
+        element: <HomePage num={1} />
       },
       {
         path: "/tool1",
